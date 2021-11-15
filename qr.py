@@ -8,7 +8,7 @@ from io import BytesIO
 #QR2URL
 
 def qr2url():
-    img = cv2.imread('qr.png')
+    img = cv2.imread('qr.png') #import the qr photo
     for a in decode(img):
         #print(decode(img))
         print(a.data.decode('utf-8'))
@@ -17,7 +17,7 @@ def qr2url():
 #CAM2URL
 
 def cam2url():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0) #use webcam for scanning
     cap.set(3,640)
     cap.set(4,480)
     usedCodes = []
